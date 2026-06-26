@@ -19,7 +19,7 @@ theme:
       toggle:
         icon: material/brightness-3 # Moon crescent icon
         name: Switch theme
-  favicon:
+  favicon: assets/favicon.ico
   features:
     - navigation.tabs
     - navigation.sections
