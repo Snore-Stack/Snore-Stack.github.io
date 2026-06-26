@@ -1,0 +1,40 @@
+name: Deploy MkDocs to GitHub Pages
+on:
+  # Triggers when merging or pushing on the main branch
+  push:
+    branches:
+      - main
+# Required permissions to deploy to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+# Prevents concurrent deployments (in case of quick multiple commits while a
+# build already started)
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      # Use Docker in CI to guarantee a build 100% identical to the local
+      # environment
+      - name: Build site with MkDocs Material Docker
+        run: |
+          docker run --rm -v ${{ github.workspace }}:${{ github.workspace }} -w ${{ github.workspace }} squidfunk/mkdocs-material:9 build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # MkDocs generates the static site in the 'site' folder by default
+          path: site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

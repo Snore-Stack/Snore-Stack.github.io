@@ -1,0 +1,30 @@
+site_name: Snore-Stack
+site_url: https://snore-stack.github.io/
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7 # Sun icon
+        name: Switch theme
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-3 # Moon crescent icon
+        name: Switch theme
+  favicon:
+  features:
+    - navigation.tabs
+    - navigation.sections
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
