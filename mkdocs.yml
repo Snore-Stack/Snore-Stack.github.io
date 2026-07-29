@@ -30,6 +30,9 @@ theme:
     - search.highlight # Surlignage des mots cherchés
     - content.code.copy # Bouton pour copier les blocs de code
 
+plugins:
+  - search
+
 markdown_extensions:
   - admonition # Blocs d'avertissement/notes (!!! note, !!! warning)
   - pymdownx.details # Blocs pliables/dépliables
