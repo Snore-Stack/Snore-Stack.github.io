@@ -40,4 +40,4 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-  - pymdownx.highlight:
+  - pymdownx.highlight
