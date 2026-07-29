@@ -3,6 +3,7 @@ site_url: https://snore-stack.github.io/
 
 theme:
   name: material
+  logo: assets/favicon.ico
   palette:
     # Mode Clair
     - media: "(prefers-color-scheme: light)"
