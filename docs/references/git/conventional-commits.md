@@ -18,12 +18,12 @@ type(scope): description
 
 1. **Le Titre (Première ligne)** : La ligne `type(scope): description`.
 2. **Le Corps (Body)** :
-   * Séparé du titre par **une ligne vide**.
-   * Contient du texte libre. Explique le *pourquoi* et le *comment*.
+      *  Séparé du titre par **une ligne vide**.
+      * Contient du texte libre. Explique le *pourquoi* et le *comment*.
 3. **Les Footers** :
-   * Séparés du corps par **une ligne vide**.
-   * Se trouvent obligatoirement tout en bas du message.
-   * Suivent la structure clé/valeur : `Clé: Valeur` (ex: `BREAKING CHANGE: ...` ou `Fixes: #12`).
+      * Séparés du corps par **une ligne vide**.
+      * Se trouvent obligatoirement tout en bas du message.
+      * Suivent la structure clé/valeur : `Clé: Valeur` (ex: `BREAKING CHANGE: ...` ou `Fixes: #12`).
 
 ---
 
