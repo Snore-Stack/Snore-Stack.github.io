@@ -1,30 +1,40 @@
 site_name: Snore-Stack
 site_url: https://snore-stack.github.io/
+
 theme:
   name: material
   palette:
-    # Light mode
+    # Mode Clair
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/brightness-7 # Sun icon
-        name: Switch theme
-    # Dark mode
+        icon: material/brightness-7
+        name: Passer au mode sombre
+    # Mode Sombre
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/brightness-3 # Moon crescent icon
-        name: Switch theme
+        icon: material/brightness-3
+        name: Passer au mode clair
   favicon: assets/favicon.ico
   features:
-    - navigation.tabs
-    - navigation.sections
+    - navigation.tabs # Menu par onglets en haut
+    - navigation.sections # Sous-sections dans le menu latéral
+    - navigation.top # Bouton "Retour en haut"
+    - navigation.indexes # Permet aux dossiers d'avoir un index.md cliquable
+    - search.suggest # Autocomplétion dans la recherche
+    - search.highlight # Surlignage des mots cherchés
+    - content.code.copy # Bouton pour copier les blocs de code
+
 markdown_extensions:
+  - admonition # Blocs d'avertissement/notes (!!! note, !!! warning)
+  - pymdownx.details # Blocs pliables/dépliables
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
+  - pymdownx.highlight:
