@@ -2,50 +2,50 @@
 
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-Bienvenue sur le dépôt source de la documentation **Snore-Stack**, hébergée sur **[snore-stack.github.io](https://snore-stack.github.io/)** et maintenue par **[@vpraion](https://github.com/vpraion)** et **[@AraaCraft](https://github.com/AraaCraft)**.
+Welcome to the source repository of the **Snore-Stack** documentation, hosted on **[snore-stack.github.io](https://snore-stack.github.io/)** and maintained by **[@vpraion](https://github.com/vpraion)** and **[@AraaCraft](https://github.com/AraaCraft)**.
 
 ---
 
-## 🛠️ Développement Local
+## 🛠️ Local Development
 
-### Prérequis
+### Requirements
 * **Node.js** `>= 18.0.0`
 * **Docker**
 
-### 1. Cloner et installer les hooks
+### 1. Clone and install hooks
 ```bash
 git clone git@github.com:Snore-Stack/Snore-Stack.github.io.git
 cd Snore-Stack.github.io
 npm install
 ```
-*(Le `npm install` active automatiquement Husky pour valider les messages de commit en local).*
+*(The `npm install` command automatically enables Husky to validate commit messages locally).*
 
-### 2. Servir la doc en local
+### 2. Serve the documentation locally
 ```bash
 docker-compose up -d
 ```
-Accès local sur [http://localhost:8000](http://localhost:8000).
+Available locally at [http://localhost:8000](http://localhost:8000).
 
 ---
 
 ## 📝 Commits & Releases
 
-Ce dépôt utilise **Conventional Commits** (contrôlé par **Commitlint**) et **Semantic Release**.
+This repository uses **Conventional Commits** (enforced by **Commitlint**) and **Semantic Release**.
 
 ```bash
-feat(git): add new page for git hooks    # Déclenche une version MINOR
-fix(ui): fix search bar styling          # Déclenche une version PATCH
+feat(git): add new page for git hooks    # Triggers a MINOR version
+fix(ui): fix search bar styling          # Triggers a PATCH version
 ```
 
 ---
 
-## 📂 Structure du projet
+## 📂 Project Structure
 
-La documentation est rédigée dans le dossier `docs/` selon le cadre [Diátaxis](docs/references/architecture/diataxis-framework.md) :
+The documentation is written in the `docs/` directory following the [Diátaxis framework](docs/references/architecture/diataxis-framework.md):
 
 ```text
 docs/
-├── index.md        # Page d'accueil (Philosophie & Présentation)
-├── how-to/         # Guides pratiques pas-à-pas
-└── references/     # Fiches de référence & Normes
+├── index.md        # Home page (Philosophy & Overview)
+├── how-to/         # Step-by-step practical guides
+└── references/     # Reference sheets & Standards
 ```
