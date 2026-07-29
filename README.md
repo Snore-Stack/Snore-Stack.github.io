@@ -1,6 +1,7 @@
 # Snore-Stack Documentation Repository
 
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![Deploy](https://github.com/snore-stack/snore-stack.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/snore-stack/snore-stack.github.io/actions/workflows/deploy.yml/badge.svg)
 
 Welcome to the source repository of the **Snore-Stack** documentation, hosted on **[snore-stack.github.io](https://snore-stack.github.io/)** and maintained by **[@vpraion](https://github.com/vpraion)** and **[@AraaCraft](https://github.com/AraaCraft)**.
 
