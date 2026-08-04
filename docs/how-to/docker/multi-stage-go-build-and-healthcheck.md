@@ -89,7 +89,7 @@ services:
 
 ## 🔍 Analyse de la commande de test
 
-$$\text{wget -qO- http://localhost:8080/healthz} \quad || \quad \text{exit 1}$$
+`wget -qO- http://localhost:8080/healthz} \quad || \quad \text{exit 1}`
 
 - **`-q`** (*quiet*) : Mode silencieux pour éviter de polluer les journaux du conteneur à chaque vérification.
 - **`-O-`** (*Output to stdout*) : Écrit la réponse HTTP vers la sortie standard au lieu de créer un fichier physique sur le disque.
