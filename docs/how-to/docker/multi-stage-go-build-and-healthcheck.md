@@ -100,3 +100,10 @@ services:
 - **`timeout`** : Temps limite accordé pour recevoir la réponse HTTP (3 secondes).
 - **`retries`** : Nombre d'échecs consécutifs nécessaires avant de passer le statut à `unhealthy` (évite les fausses alertes sur micro-pics).
 - **`start_period`** : Période de grâce initiale accordée au conteneur au démarrage.
+
+---
+
+## 🔗 À lire aussi
+
+- 🛡️ **[Sécuriser un Dockerfile & Intégrer Trivy en CI/CD](securing-dockerfile-and-trivy-ci.md)** : Apprendre à exécuter ses conteneurs en mode non-root et auditer la sécurité des images avec Trivy.
+
