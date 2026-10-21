@@ -22,7 +22,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       # Use Docker in CI to guarantee a build 100% identical to the local
       # environment
       - name: Build site with MkDocs Material Docker
@@ -35,12 +35,12 @@ jobs:
             squidfunk/mkdocs-material:9 \
             -c "pip install mkdocs-git-committers-plugin-2 && mkdocs build"
       - name: Setup Pages
-        uses: actions/configure-pages@45bfe01
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@cf430e0
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
         with:
           # MkDocs generates the static site in the 'site' folder by default
           path: site
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@368f825
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346
