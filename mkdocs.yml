@@ -35,7 +35,7 @@ plugins:
   - search
   - git-revision-date-localized:
       enable_creation_date: true
-      type: datetime
+      type: date
       locale: fr
       fallback_to_build_date: true
   - git-committers:
