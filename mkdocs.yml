@@ -33,6 +33,16 @@ theme:
 
 plugins:
   - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+      locale: fr
+      fallback_to_build_date: true
+  - git-committers:
+      repository: snore-stack/snore-stack.github.io
+      branch: main
+      docs_path: docs/
+      token: !ENV [MKDOCS_GIT_COMMITTERS_APIKEY, ""]
 
 markdown_extensions:
   - admonition # Blocs d'avertissement/notes (!!! note, !!! warning)

@@ -27,7 +27,13 @@ jobs:
       # environment
       - name: Build site with MkDocs Material Docker
         run: |
-          docker run --rm -v ${{ github.workspace }}:${{ github.workspace }} -w ${{ github.workspace }} squidfunk/mkdocs-material:9 build
+          docker run --rm \
+            -e MKDOCS_GIT_COMMITTERS_APIKEY="${{ secrets.GITHUB_TOKEN }}" \
+            -v ${{ github.workspace }}:${{ github.workspace }} \
+            -w ${{ github.workspace }} \
+            --entrypoint sh \
+            squidfunk/mkdocs-material:9 \
+            -c "pip install mkdocs-git-committers-plugin-2 && mkdocs build"
       - name: Setup Pages
         uses: actions/configure-pages@45bfe01
       - name: Upload artifact
