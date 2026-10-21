@@ -44,6 +44,10 @@ plugins:
       docs_path: docs/
       token: !ENV [MKDOCS_GIT_COMMITTERS_APIKEY, ""]
 
+validation:
+  links:
+    absolute_links: relative_to_docs
+
 markdown_extensions:
   - admonition # Blocs d'avertissement/notes (!!! note, !!! warning)
   - pymdownx.details # Blocs pliables/dépliables
